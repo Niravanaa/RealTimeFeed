@@ -31,7 +31,7 @@ class SinglePost extends Component {
         postId: postId
       }
     };
-    fetch('http://localhost:8080/graphql', {
+    fetch('https://merny-store-backend.vercel.app/graphql', {
       method: 'POST',
       headers: {
         Authorization: 'Bearer ' + this.props.token,
@@ -49,7 +49,7 @@ class SinglePost extends Component {
         this.setState({
           title: resData.data.post.title,
           author: resData.data.post.creator.name,
-          image: 'http://localhost:8080/' + resData.data.post.imageUrl,
+          image: 'https://merny-store-backend.vercel.app/' + resData.data.post.imageUrl,
           date: new Date(resData.data.post.createdAt).toLocaleDateString('en-US'),
           content: resData.data.post.content
         });
