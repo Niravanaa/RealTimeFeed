@@ -73,7 +73,7 @@ class App extends Component {
       }
     };
     this.setState({ authLoading: true });
-    fetch('https://merny-store-backend.vercel.app/graphql', {
+    fetch('https://message-node-backend.vercel.app/graphql', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -136,7 +136,7 @@ class App extends Component {
         password: authData.signupForm.password.value
       }
     };
-    fetch('https://merny-store-backend.vercel.app/graphql', {
+    fetch('https://message-node-backend.vercel.app/graphql', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
