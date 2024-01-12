@@ -11,6 +11,9 @@ const graphqlResolver = require('./graphql/resolvers');
 const auth = require('./middleware/auth');
 const { clearImage } = require('./util/file');
 const dotenv = require('dotenv').config();
+var cors = require('cors')
+
+app.use(cors())
 
 const app = express();
 
